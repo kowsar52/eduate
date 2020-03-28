@@ -1,174 +1,162 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>Eduate</title>
-
-        {{-- css file include  --}}
-    <link rel="stylesheet" href="{{ asset('BackendAssets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ asset('BackendAssets/css/all.css')}}">
-    <link rel="stylesheet" href="{{ asset('BackendAssets/css/style.css')}}">
-
-    {{-- include favicon  --}}
-    <link rel="icon" href="{{ asset('/uploads/logo/favicon.png')}}" sizes="16x16" type="image/png">
-    </head>
-<body>
-    <div class="page-wrapper chiller-theme toggled">
-        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
-          <i class="fa fa-bars"></i>
+@extends('principal/layout')
+@section('title','Principal Dashboard')
+@section('content')
+{{-- breadcrumb start  --}}
+<div class="col-xm-12">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item active"><a  href="{{url('principal/dashboard')}}">Home</a>
+      </ol>
+    </nav>
+  </div>
+  {{-- breadcrumb end  --}}
+  <div class="row kk_dash_menu">
+      <div class="col-md-3">
+        <a href="{{ url('principal/dashboard')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#e2d103,#f54a2e)">
+              <i class="fa fa-home text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Home</span>
+            </div>
         </a>
-        <nav id="sidebar" class="sidebar-wrapper">
-          <div class="sidebar-content">
-            <div class="sidebar-brand">
-              <a href="#">Eduate</a>
-              <div id="close-sidebar">
-                <i class="fa fa-times"></i>
-              </div>
+    </div>
+    
+      <div class="col-md-3">
+        <a href="{{ url('principal/profile')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#28a745,#e8e231);">
+              <i class="fa fa-user text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Profile</span>
             </div>
-            <div class="sidebar-header">
-              <div class="user-pic">
-                <img class="img-responsive img-rounded" src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
-                  alt="User picture">
-              </div>
-              <div class="user-info">
-                <span class="user-name">{{ Auth::user()->name }}
-                </span>
-                <span class="user-role text-uppercase">{{ str_replace('_',' ',Auth::user()->user_type) }}</span>
-                <span class="user-status">
-                  <i class="fa fa-circle"></i>
-                  <span>Online</span>
-                </span>
-              </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/allTeachers')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#f31470,#9931e8)">
+              <i class="fa fa-users text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>All Teachers</span>
             </div>
-            <!-- sidebar-header  -->
-            <div class="sidebar-search">
-              <div>
-                <div class="input-group">
-                  <input type="text" class="form-control search-menu" placeholder="Search...">
-                  <div class="input-group-append">
-                    <span class="input-group-text">
-                      <i class="fa fa-search" aria-hidden="true"></i>
-                    </span>
-                  </div>
-                </div>
-              </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/sectionWiseStudent')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#1444f3,#2eb5f5)">
+              <i class="fa fa-users text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Section Wise Student</span>
             </div>
-            <!-- sidebar-search  -->
-            <div class="sidebar-menu">
-              <ul>
-                <li class="header-menu">
-                  <span>General</span>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-home"></i>
-                        <span>Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-user"></i>
-                        <span>Profile</span>
-                    </a>
-                </li>
-                {{-- <li class="sidebar-dropdown">
-                  <a href="#">
-                    <i class="fa fa-user"></i>
-                    <span>Charts</span>
-                  </a>
-                  <div class="sidebar-submenu">
-                    <ul>
-                      <li>
-                        <a href="#">Pie chart</a>
-                      </li>
-                      <li>
-                        <a href="#">Line chart</a>
-                      </li>
-                      <li>
-                        <a href="#">Bar chart</a>
-                      </li>
-                      <li>
-                        <a href="#">Histogram</a>
-                      </li>
-                    </ul>
-                  </div>
-                </li> --}}
-                <li class="header-menu">
-                  <span>Others</span>
-                </li>
-                <li>
-                  <a href="#">
-                    <i class="fa fa-book"></i>
-                    <span>All Students</span>
-                  </a>
-                </li>
-                </li>
-              </ul>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/allClasses')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#8c3dbd,#2e52ff)">
+              <i class="fa fa-pen-nib text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>All Classes</span>
             </div>
-            <!-- sidebar-menu  -->
-          </div>
-          
-          <!-- sidebar-content  -->
-          <div class="sidebar-footer">
-            <a href="#">
-              <i class="fa fa-bell"></i>
-              <span class="badge badge-pill badge-warning notification">3</span>
-            </a>
-            <a href="#">
-              <i class="fa fa-envelope"></i>
-              <span class="badge badge-pill badge-success notification">7</span>
-            </a>
-            <a href="#">
-              <i class="fa fa-cog"></i>
-              <span class="badge-sonar"></span>
-            </a>
-            <a class="" href="{{ route('logout') }}"
-               onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                <i class="fa fa-power-off"></i>
-            </a>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/allSubjects?page=subjects')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#ff722f,#b10fa4)">
+              <i class="fa fa-book-open text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>All Subjects</span>
+            </div>
+        </a>
+    </div>
+    <div class="col-md-3">
+        <a href="{{ url('principal/assignTeacher')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#035ce2,#00ffe7)">
+              <i class="fa fa-book-reader text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Assign Teacher</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/createExam')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#28a745,#10f745)">
+              <i class="fa fa-book text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Create Exam</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/allModerators')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#ff722f,#b10fa4)">
+              <i class="fa fa-users text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>All Moderators</span>
+            </div>
+        </a>
+    </div>
 
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-            
-          </div>
-        </nav>
-        <!-- sidebar-wrapper  -->
-         {{-- ################# main content Start  ################################ --}}
-         <div class="container_fluid kk_d_navbar">
-            <ul class="nav float-right">
-                <li class="nav-item">
-                  <a class="kk-nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="kk-nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                  <a class="kk-nav-link" href="#">Chat</a>
-                </li>
-                <li class="nav-item">
-                  <a class="kk-nav-link" href="#">Contact</a>
-                </li>
-                <li class="nav-item">
-                  <a class="kk-nav-link" href="#">Help!</a>
-                </li>
-              </ul>
-         </div>
-        <main class="page-content">
-          <div class="container_fluid">
-           <h1>{{ Auth::user()->name }} Dashboard</h1>
-          </div>
-      
-        </main>
-         {{-- ################# main content End  ################################ --}}
-      </div>
-      <!-- page-wrapper -->
-       {{-- include js file  --}}
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-       <script src="{{ asset('backendAssets/js/custom.js')}}"></script>
-       <script src="{{ asset('backendAssets/js/bootstrap.min.js')}}"></script>
-</body>
-</html>
+      <div class="col-md-3">
+        <a href="{{ url('principal/allStudents')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#8c03e2,#f52e8a);">
+              <i class="fa fa-users text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>All Students</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/resultPublish')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#8c03e2,#f52e8a);">
+              <i class="fa fa-snowflake text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Publish Result</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/viewResult')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#28a745,#10f745)">
+                <i class="fa fa-snowflake text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>View Result</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/attendenceHistory')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#ff722f,#b10fa4)">
+                <i class="fa fa-snowflake text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Attendence History</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/routine')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#28a745,#10f745)">
+                <i class="fa fa-snowflake text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Routine</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/contact')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#0af9c2,#2eb5f5)">
+                <i class="fa fa-phone text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Contact</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/notice')}}">
+          <div class="kk_item" style="background-image: linear-gradient(to right,#8c03e2,#f52e8a);">
+              <i class="fa fa-sticky-note text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Notice</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/transaction')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#1444f3,#2eb5f5)">
+                <i class="fa fa-dollar-sign text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Transaction</span>
+            </div>
+        </a>
+    </div>
+      <div class="col-md-3">
+        <a href="{{ url('principal/contact')}}">
+            <div class="kk_item" style="background-image: linear-gradient(to right,#1444f3,#2eb5f5)">
+                <i class="fa fa-home text-white text-center" style="font-size:40px;margin-top:5px"></i><br>
+              <span>Front Page</span>
+            </div>
+        </a>
+    </div>
+
+  </div>
+@endsection

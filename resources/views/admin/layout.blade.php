@@ -8,7 +8,7 @@
 
         {{-- css file include  --}}
     <link rel="stylesheet" href="{{ asset('BackendAssets/css/bootstrap.css')}}">
-    <link rel="stylesheet" href="{{ asset('BackendAssets/css/all.css')}}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('BackendAssets/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('BackendAssets/css/datatables.min.css')}}">
 
@@ -73,9 +73,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href="{{ url('admin/author')}}">
+                    <a href="{{ url('admin/profile')}}">
                         <i class="fa fa-user"></i>
-                        <span>Auhtor/Principal</span>
+                        <span>Profile</span>
                     </a>
                 </li>
                 {{-- <li class="sidebar-dropdown">
@@ -102,6 +102,12 @@
                 </li> --}}
                 <li class="header-menu">
                   <span>Others</span>
+                </li>
+                <li>
+                  <a href="{{url('changePassword')}}">
+                    <i class="fa fa-key"></i>
+                    <span>Change Password</span>
+                  </a>
                 </li>
                 <li>
                   <a href="#">
@@ -169,11 +175,21 @@
       </div>
       <!-- page-wrapper -->
        {{-- include js file  --}}
-
+    {{-- X-CSRF-TOKEN for all ajax post requests --}}
+    <script>
+      $(document).ready(function(){
+          $.ajaxSetup({
+              headers: {
+                  'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+              }
+          });
+      });
+  </script>
         @yield('js') {{--add custom js --}}
         
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
-       <script src="{{ asset('backendAssets/js/custom.js')}}"></script>
-       <script src="{{ asset('backendAssets/js/bootstrap.min.js')}}"></script>
+       <script src="{{ asset('BackendAssets/js/custom.js')}}"></script>
+       <script src="{{ asset('BackendAssets/js/bootstrap.min.js')}}"></script>
+       <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>

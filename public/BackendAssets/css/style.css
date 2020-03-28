@@ -50,7 +50,6 @@
 
 footer{
     width: 100%;
-    position: absolute;
     bottom: 0;
 }
 
@@ -554,3 +553,119 @@ footer{
     padding: 5px;
     border-radius: 5px;
   }
+  .table_title{
+    width: 200px!important;
+  }
+
+  /* //principal dashboar css/ */
+  .kk_d_item img{
+    width: 250px;
+    /* padding: 10px; */
+    position: relative;
+  }
+  .kk_d_item h3{
+    position: absolute;
+    top: 15px;
+    margin: 70px;
+    color: #077df7;
+    height: 100%;
+    width: 250px;
+  }
+  #newSectionForm{
+    /* background: #f3f7ff; */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .kk_profile_img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 2px solid #f9ab19;
+    padding: 2px;
+  }
+  p.profile_type {
+    margin-top: -21px;
+    color: #737373;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-style: unset;
+}
+p.profile_name {
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 18px;
+  padding: 5px;
+}
+.kk_profile.text-center {
+  background: #ecefff;
+  padding: 25px;
+  box-shadow: 3px 4px 9px -1px #31353d;
+  border-radius: 10px;
+  width: 50%;
+}
+.profile_details i {
+  position: absolute;
+  background: var(--warning);
+  padding: 8px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+}
+.profile_details p {
+  position: relative;
+  left: 41px;
+  font-weight: 600;
+  color: #333333;
+}
+.chagen_pass{
+  background: #f5f6f9;
+    padding: 20px;
+    box-shadow: -2px 3px 9px -1px #31353d;
+    border-radius: 10px;
+}
+
+.kk_teach_menu .kk_item{
+  background-image: linear-gradient(to right,#ffa402,#e83a31);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 2px 2px 8px -1px #777777;
+  border-radius: 20px;
+  margin: 0px 0px 29px 0px;
+  height: 150px;
+}
+.kk_teach_menu .kk_item img{
+  height: 50px;
+  width: 50px;
+}
+.kk_teach_menu .kk_item a{
+  display: block;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.kk_tab .active_medium{
+  background: var(--blue);
+    color: #fff;
+    border-bottom: 3px solid var(--warning);
+}
+
+.kk_dash_menu .kk_item {
+  text-align: center;
+  padding: 30px;
+  height: 150px;
+  color: #fff;
+  border-radius:20px;
+  box-shadow: 4px 5px 13px 2px #c1c1c1;
+  margin-bottom: 30px;
+}
+.kk_dash_menu .kk_item span{
+  font-size: 16px;
+  font-weight: 700;
+}
+.kk_dash_menu{
+  margin-top: -30px !important;
+}

@@ -15,6 +15,12 @@ class Stuff
      */
     public function handle($request, Closure $next)
     {
+        session_start();                
+
+        if (empty($_SESSION["user"]))
+        {
+           return redirect('/');
+        }
         return $next($request);
     }
 }

@@ -1,0 +1,54 @@
+[20-Mar-2020 08:28:14 UTC] PHP Warning:  Uncaught ErrorException: require(xmlapi.php): failed to open stream: No such file or directory in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php:70
+Stack trace:
+#0 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(70): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(xmlapi....', '/home/clevproc/...', 70, Array)
+#1 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(70): require()
+#2 [internal function]: App\Http\Controllers\SuperAdminController->addSchool(Object(Illuminate\Http\Request))
+#3 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#4 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\Routing\Controller->callAction('addSchool', Array)
+#5 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Route.php(22 in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 70
+[20-Mar-2020 08:28:14 UTC] PHP Fatal error:  App\Http\Controllers\SuperAdminController::addSchool(): Failed opening required 'xmlapi.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 70
+[20-Mar-2020 08:31:37 UTC] PHP Fatal error:  Cannot declare class xmlapi, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi.php on line 132
+[20-Mar-2020 08:34:32 UTC] PHP Fatal error:  Cannot declare class xmlapi, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi.php on line 132
+[20-Mar-2020 08:35:49 UTC] PHP Warning:  Uncaught ErrorException: require(xmlapi.php): failed to open stream: No such file or directory in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php:71
+Stack trace:
+#0 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(71): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(xmlapi....', '/home/clevproc/...', 71, Array)
+#1 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(71): require()
+#2 [internal function]: App\Http\Controllers\SuperAdminController->addSchool(Object(Illuminate\Http\Request))
+#3 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#4 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\Routing\Controller->callAction('addSchool', Array)
+#5 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Route.php(22 in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 71
+[20-Mar-2020 08:35:49 UTC] PHP Fatal error:  App\Http\Controllers\SuperAdminController::addSchool(): Failed opening required 'xmlapi.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 71
+[20-Mar-2020 08:36:10 UTC] PHP Fatal error:  Cannot declare class XMLAPI, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/XMLAPI.php on line 132
+[20-Mar-2020 08:51:16 UTC] PHP Fatal error:  Cannot declare class xmlapi, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi.php on line 132
+[20-Mar-2020 08:52:16 UTC] PHP Fatal error:  Cannot declare class xmlapi, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi.php on line 132
+[20-Mar-2020 08:52:19 UTC] PHP Fatal error:  Cannot declare class xmlapi, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi.php on line 132
+[20-Mar-2020 08:54:05 UTC] PHP Fatal error:  Cannot declare class xmlapi_1, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi_1.php on line 132
+[20-Mar-2020 08:55:48 UTC] PHP Fatal error:  Cannot declare class xmlapi_1, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi_1.php on line 132
+[20-Mar-2020 09:01:08 UTC] PHP Fatal error:  Cannot declare class xmlapi_1, because the name is already in use in /home/clevproc/public_html/eduate/app/Http/Controllers/xmlapi_1.php on line 132
+[20-Mar-2020 09:04:01 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:05:22 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:06:29 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:06:43 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:07:10 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:26:13 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:27:12 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:31:29 UTC] Some error message here
+[20-Mar-2020 09:31:29 UTC] Some error message here
+[20-Mar-2020 09:31:29 UTC] Some error message here
+[20-Mar-2020 09:33:18 UTC] Some error message here
+[20-Mar-2020 09:33:18 UTC] Some error message here
+[20-Mar-2020 09:33:18 UTC] Some error message here
+[20-Mar-2020 09:33:34 UTC] Some error message here
+[20-Mar-2020 09:33:34 UTC] Some error message here
+[20-Mar-2020 09:33:34 UTC] Some error message here
+[20-Mar-2020 09:45:28 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 09:45:52 UTC] api1_query requires that it is passed an array as the 4th parameter
+[20-Mar-2020 10:30:59 UTC] PHP Warning:  Uncaught ErrorException: require(./create_db/init.php): failed to open stream: No such file or directory in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php:67
+Stack trace:
+#0 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(67): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'require(./creat...', '/home/clevproc/...', 67, Array)
+#1 /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php(67): require()
+#2 [internal function]: App\Http\Controllers\SuperAdminController->addSchool(Object(Illuminate\Http\Request))
+#3 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Controller.php(54): call_user_func_array(Array, Array)
+#4 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(45): Illuminate\Routing\Controller->callAction('addSchool', Array)
+#5 /home/clevproc/public_html/eduate/vendor/laravel/framework/src/Illuminate/Routing/Ro in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 67
+[20-Mar-2020 10:30:59 UTC] PHP Fatal error:  App\Http\Controllers\SuperAdminController::addSchool(): Failed opening required './create_db/init.php' (include_path='.:/opt/cpanel/ea-php73/root/usr/share/pear') in /home/clevproc/public_html/eduate/app/Http/Controllers/SuperAdminController.php on line 67

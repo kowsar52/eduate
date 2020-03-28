@@ -53,11 +53,11 @@
                         <h1 class="text-center">Sign In </h1>
                         <p class="text-center">Sign In Your Account!</p>
                         <p class="text-center text-danger"><?php echo $errors->first(); ?></p>
-                        <form action="{{ url('/login/post')}}" method="post">
+                        <form action="{{ url('user/login/post')}}" method="post">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 {{-- <i class="fa fa-user icon"></i> --}}
-                                <input type="text" class="form-control"  placeholder="User ID" name="username">
+                                <input type="text" class="form-control"  placeholder="User ID" name="username" value="{{ old('username') }}">
                               </div>
                             <div class="form-group">
                               {{-- <i class="fa fa-key icon"></i> --}}
@@ -73,7 +73,7 @@
                                     <option value="vice_principal">Vice-Principal</option>
                                     <option value="accountant">Accountant</option>
                                     <option value="stuff">Stuff</option>
-                                    <option value="super_admin">Admin</option>
+                                   
                                 </select>
                             </div>
                             <div class="form-group">
@@ -89,7 +89,7 @@
                                 </select>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                                 <label class="form-check-label" for="defaultCheck1">
                                   Remember Me
                                 </label>
@@ -99,7 +99,12 @@
                           
                             <button type="submit" class="btn btn-warning text-white font-weight-bold btn-full mt-2">Sign In</button>
                             <div class="form-group text-center mt-2">
-                                <a href="#" style="text-align:center;color: var(--dark);">Forget Password?</a>
+                                @if (Route::has('password.request'))
+                                <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                            @endif
+                                {{-- <a href="#" style="text-align:center;color: var(--dark);">Forget Password?</a> --}}
                             </div>
                             
                           </form>
@@ -112,10 +117,10 @@
 
         {{-- footer section start  --}}
         <footer>
-            <div class="container_fluid bg-dark">
+            <div class="container_fluid ">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-12 text-center text-white">
+                        <div class="col-md-12 text-center text-dark">
                             <p style="padding: 10px;font-weight:700">Copyright © 2020 Eduate | Powered by HURU Technologies</p>
                         </div>
                     </div>
